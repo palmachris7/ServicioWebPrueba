@@ -37,7 +37,7 @@ public class CursoController {
 
 
 	@RequestMapping(method = RequestMethod.GET, path = "/listar/{id}")
-	public @ResponseBody ResponseEntity<Curso> productById(@PathVariable Integer id){
+	public @ResponseBody ResponseEntity<Curso> cursoById(@PathVariable Integer id){
 		Curso curso = service.cursoById(id);
 		if(curso != null) {
 			return new ResponseEntity<Curso>(curso, HttpStatus.OK);
