@@ -7,9 +7,9 @@ import com.idat.idatapirest.model.Curso;
 
 public interface CursoService {
 
-	public void guardarCurso(CursoRequestDTO p);
+	public void guardarCurso(CursoRequestDTO c);
 	public void eliminarCurso(Integer id);
-	public void editarCurso(Curso p);
+	public void editarCurso(Curso c);
 	public List<Curso> listarCurso();
 	public Curso cursoById(Integer id);
 

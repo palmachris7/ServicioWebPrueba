@@ -11,6 +11,8 @@ import java.util.List;
 @Service
 public class ProfesorServiceImpl implements ProfesorService {
 
+    @Autowired
+    private ProfesorRepository repository;
     @Override
     public void guardarProfesor(ProfesorRequestDTO p) {
 

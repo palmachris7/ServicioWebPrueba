@@ -12,9 +12,11 @@ import com.idat.idatapirest.repository.CursoRepository;
 @Service
 public class CursoServiceImpl implements CursoService {
 
+	@Autowired
+	private CursoRepository repository;
 
 	@Override
-	public void guardarCurso(CursoRequestDTO p) {
+	public void guardarCurso(CursoRequestDTO c) {
 
 	}
 
@@ -24,7 +26,7 @@ public class CursoServiceImpl implements CursoService {
 	}
 
 	@Override
-	public void editarCurso(Curso p) {
+	public void editarCurso(Curso c) {
 
 	}
 
