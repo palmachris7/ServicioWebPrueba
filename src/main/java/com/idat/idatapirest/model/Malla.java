@@ -14,7 +14,7 @@ public class Malla {
 
     @OneToOne
     @JoinColumn(name="id_universidad", nullable = false, unique = true,
-            foreignKey = @ForeignKey(foreignKeyDefinition = "foreign key (id_producto) references products (id_producto)"))
+            foreignKey = @ForeignKey(foreignKeyDefinition = "foreign key (id_universidad) references universidads (id_universidad)"))
     private Universidad universidads;
 
     @OneToMany(mappedBy = "mallas")
