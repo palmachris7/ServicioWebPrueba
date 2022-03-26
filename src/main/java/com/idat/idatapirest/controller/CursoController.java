@@ -60,8 +60,8 @@ public class CursoController {
 
 	@RequestMapping(method = RequestMethod.PUT, path = "/editar")
 	public ResponseEntity<Void> editar(@RequestBody Curso curso){
-		Curso a = service.cursoById(curso.getIdCurso());
-		if(a != null) {
+		Curso p = service.cursoById(curso.getIdCurso());
+		if(p != null) {
 			service.editarCurso(curso);
 			return new ResponseEntity<Void>(HttpStatus.OK);
 		}

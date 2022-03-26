@@ -15,26 +15,29 @@ public class ProfesorServiceImpl implements ProfesorService {
     private ProfesorRepository repository;
     @Override
     public void guardarProfesor(ProfesorRequestDTO p) {
-
+        Profesor profesor = new Profesor();
+        profesor.setIdProfesor(p.getIdRequest());
+        profesor.setProfesor(p.getProfesor());
+        repository.save(profesor);
     }
 
     @Override
     public void eliminarProfesor(Integer id) {
-
+        repository.deleteById(id);
     }
 
     @Override
     public void editarProfesor(Profesor p) {
-
+        repository.saveAndFlush(p);
     }
 
     @Override
     public List<Profesor> listarProfesors() {
-        return null;
+        return repository.findAll();
     }
 
     @Override
     public Profesor ProfesorById(Integer id) {
-        return null;
+        return repository.findById(id).orElse(null);
     }
 }

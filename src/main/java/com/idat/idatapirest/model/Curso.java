@@ -11,7 +11,7 @@ import javax.persistence.*;
 @Entity
 public class Curso implements Serializable{
 
-	private static final long serialVersionUID = 6026109738059984351L;
+
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)

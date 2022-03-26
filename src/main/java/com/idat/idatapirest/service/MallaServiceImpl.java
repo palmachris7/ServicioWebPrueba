@@ -13,26 +13,29 @@ public class MallaServiceImpl implements MallaService {
     private MallaRepository repository;
     @Override
     public void guardarMalla(MallaRequestDTO m) {
-
+        Malla malla = new Malla();
+        malla.setIdMalla(m.getIdRequest());
+        malla.setAño(m.getAño());
+        repository.save(malla);
     }
 
     @Override
     public void eliminarMalla(Integer id) {
-
+        repository.deleteById(id);
     }
 
     @Override
     public void editarMalla(Malla m) {
-
+        repository.saveAndFlush(m);
     }
 
     @Override
     public List<Malla> listarMalla() {
-        return null;
+        return repository.findAll();
     }
 
     @Override
     public Malla mallaById(Integer id) {
-        return null;
+        return repository.findById(id).orElse(null);
     }
 }
